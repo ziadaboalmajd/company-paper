@@ -1,0 +1,168 @@
+/* @ fonts */
+
+@font-face {
+    font-family: ArabicFont;
+    src: url(./Tajawal-Black.ttf);
+    src: url(./Tajawal-Bold.ttf);
+    src: url(./Tajawal-ExtraBold.ttf);
+    src: url(./Tajawal-ExtraLight.ttf);
+    src: url(./Tajawal-Light.ttf);
+    src: url(./Tajawal-Medium.ttf);
+    src: url(./Tajawal-Regular.ttf);
+}
+
+/* @ main page  */
+* {
+    font-family: "ArabicFont";
+}
+
+
+
+body {
+    background-color: aliceblue;
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+}
+
+/* ? display of content */
+.mainPaper {
+    position: relative;
+    z-index: -1;
+}
+
+.paperCont {
+    display: grid;
+    padding: 350px 100px 0;
+}
+
+.theContent {
+    position: absolute;
+    top: 0;
+}
+
+.titleCont,
+.sendToCont,
+.greetCont,
+.messCont,
+.closingCont,
+.stampCont {
+    display: flex;
+    padding: 0;
+}
+
+/* ? directions and other style */
+.titleCont {
+    justify-content: center;
+}
+
+.sendToCont {
+    justify-content: right;
+}
+
+.greetCont {
+    justify-content: center;
+}
+
+.messCont {
+    justify-content: right;
+}
+
+.closingCont {
+    justify-content: left;
+    padding-left: 75px;
+}
+
+.stampCont {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.titleCont h1 {
+    font-weight: 900;
+    font-size: 85px;
+}
+
+.sendToCont h2 {
+    font-weight: 900;
+    font-size: 50px;
+    text-align: right;
+}
+
+.greetCont h3 {
+    font-weight: 900;
+    font-size: 45px;
+}
+
+.messCont p {
+    font-weight: 500;
+    font-size: 37px;
+    text-align: right;
+}
+
+.closingCont h3 {
+    font-weight: 900;
+    font-size: 45px;
+}
+
+.legalizations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media print {
+
+    body * {
+        visibility: hidden;
+    }
+
+    
+    .mainPaper * {
+        visibility: visible;
+        /* -webkit-print-color-adjust: exact; */
+    }
+    
+    body :not(.mainPaper) *{
+        display: none;
+    }
+
+    .mainPaper {
+        display: block !important;
+        width: 100%;
+        margin: -10px 0;
+        padding: 0;
+        page-break-after: avoid;
+        page-break-before: avoid;
+    }
+
+    /*
+    body *{
+        display: none;
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0;
+        padding: 0;
+    }  .mainPaper {
+        display: block;
+        width: 210mm;
+        height: 297mm;
+        -webkit-print-color-adjust: exact;
+    }*/
+}
+
+textarea {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 155px;
+    height: 35px;
+    padding-left: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    resize: none;
+    line-height: 35px;
+}
