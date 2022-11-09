@@ -14,7 +14,7 @@ const titleCont = document.getElementById("titleCont");
 //     mywindow.focus(); // necessary for IE >= 10*/
 
 //     mywindow.print();
-//     mywindow.close();
+//     mywindow.close();d
 
 //     return true;
 // }
