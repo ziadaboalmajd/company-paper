@@ -157,7 +157,7 @@ button {
         width: 21cm;
         height: 29.7cm;
         margin: 0;
-        padding: 0;
+        padding: 1px;
     }  .mainPaper {
         display: block;
         width: 210mm;
