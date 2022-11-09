@@ -6,54 +6,73 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <META HTTP-EQUIV="Content-language" CONTENT="ar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/main.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <title>Alhana</title>
 </head>
 
 <body>
     <main>
-        <h5>عنوان</h5>
-        <textarea type="text" id="jobinput" maxlength = "20"></textarea>
-        <h5>مرسل الي</h5>
-        <textarea type="text" id="jobinput" maxlength = "20"></textarea>
-        <h5>التحية</h5>
-        <input type="checkbox" id="greetC" value="True">
-        <h5>المضمون</h5>
-        <textarea type="text" id="jobinput" maxlength = "20"></textarea>
-        <h5>الخاتمة</h5>
-        <input type="checkbox" id="closingC" value="True">
-        <h5>الختم</h5>
-        <input type="checkbox" id="closingC" value="True">
-        <h5>امضاء احمد</h5>
-        <input type="checkbox" id="closingC" value="True">
-        <h5>امضاء صاحبة الشركة</h5>
-        <input type="checkbox" id="closingC" value="True">
-        <button id="generate">انشاء</button>
+        <div class="mainCont">
+            <h5>عنوان</h5>
+            <!-- ? auto resize alt input -->
+            <span class="textarea" role="textbox" id="titleCont" contenteditable></span>
+            <h5>مرسل الي</h5>
+            <!-- ? auto resize alt input -->
+            <span class="textarea" role="textbox" id="sendToCont" contenteditable></span>
+            <h5>التحية</h5>
+            <input type="checkbox" id="greetC" value="True" checked>
+            <h5>المضمون</h5>
+            <!-- ? auto resize alt input -->
+            <span class="textarea" role="textbox" id="messCont" contenteditable></span>
+            <h5>الخاتمة</h5>
+            <input type="checkbox" id="closingC" value="True" checked>
+            <h5>الختم</h5>
+            <input type="checkbox" id="stampC" value="True">
+            <h5>امضاء احمد</h5>
+            <input type="checkbox" id="ahmC" value="True">
+            <h5>امضاء صاحبة الشركة</h5>
+            <input type="checkbox" id="amlC" value="True">
+            <button id="generate">انشاء</button>
+        </div>
     </main>
     <div class="mainPaper" style="display: none;">
-        <img src="./img/new company paper diffWm-1.jpg" alt="">
+        <img src="./img/new company paper diffWm.jpg" style="width:1790px; image-rendering: high-quality;" alt="">
         <div class="theContent">
             <div class="paperCont">
                 <div class="titleCont">
-                    <h1 style="text-decoration: underline;">اعتذار</h1>
+                    <h1 class="titleContf" style="text-decoration: underline;
+                                text-align: center;
+                                font-weight: 900;
+                                font-size: 85px;
+                                font-family: 'Tajawal', sans-serif;"></h1>
                 </div>
                 <div class="sendToCont">
-                    <h2>السادة/شركه المشروعات البترولية والاستشارات الفني بترو جيت</h2>
+                    <h2 class="sendToContf" style=" font-weight: 900;
+                                font-size: 47px;
+                                text-align: right;
+                                font-family: 'Tajawal', sans-serif;"></h2>
                 </div>
                 <div class="greetCont">
-                    <h3>تحية طيبه وبعد</h3>
+                    <h3 class="greetContf" style="text-align: center; font-weight: 900; font-size: 45px; font-family: 'Tajawal', sans-serif;">تحية طيبة وبعد</h3>
                 </div>
                 <div class="messCont">
-                    <p>نعتذر عن الاشتراك في عملية 4425/mdk/22 حيث اننا سنقوم بالاشتراك في
-                        عملية 4391/mdk/22 الثلاثاء ٢٠٢٢ / ١١ /</p>
+                    <p  class="messContf" style="font-weight: 500;
+                                            font-size: 39px;
+                                            text-align: right;
+                                            font-family: 'Tajawal', sans-serif;"></p>
                 </div>
                 <div class="closingCont">
-                    <h3>وتقبلوا فائق الاحترا م</h3>
+                    <h3 style=" text-align: left; font-weight: 900; font-size: 43px; font-family: 'Tajawal', sans-serif;">وتقبلوا فائق الاحترام</h3>
                 </div>
                 <div class="stampCont">
                     <div class="legalizations">
-                        <img src="img/001__2_-removebg-preview.png" style="width: 510px;" alt="">
-                        <img src="img/photo_2022-10-27_01-50-10-removebg-preview.png" style="width: 410px;" alt="">
+                        <img class="stampC" src="img/001__2_-removebg-preview.png" style="width: 510px;" alt="">
+                        <img class="amlC" src="img/امضاء__2_-removebg-preview.png" style="width: 510px;" alt="">
+                        <img class="ahmC" src="img/photo_2022-10-27_01-50-10-removebg-preview.png" style="width: 410px;"
+                            alt="">
                     </div>
                 </div>
             </div>
@@ -63,3 +82,54 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+<!-- <h5>عنوان</h5>
+<textarea type="text" id="jobinput"></textarea>
+<h5>مرسل الي</h5>
+<textarea type="text" id="jobinput"></textarea>
+<h5>التحية</h5>
+<input type="checkbox" id="greetC" value="True">
+<h5>المضمون</h5>
+<textarea type="text" id="jobinput"></textarea>
+<h5>الخاتمة</h5>
+<input type="checkbox" id="closingC" value="True">
+<h5>الختم</h5>
+<input type="checkbox" id="closingC" value="True">
+<h5>امضاء احمد</h5>
+<input type="checkbox" id="closingC" value="True">
+<h5>امضاء صاحبة الشركة</h5>
+<input type="checkbox" id="closingC" value="True">
+<button id="generate">انشاء</button> -->
+
+
+
+<!-- <div class="paperCont">
+    <div class="titleCont">
+        <h1 style="text-decoration: underline;">اعتذار</h1>
+    </div>
+    <div class="sendToCont">
+        <h2>السادة/شركه المشروعات البترولية والاستشارات الفني بترو جيت</h2>
+    </div>
+    <div class="greetCont">
+        <h3>تحية طيبه وبعد</h3>
+    </div>
+    <div class="messCont">
+        <p>نعتذر عن الاشتراك في عملية 4425/mdk/22 حيث اننا سنقوم بالاشتراك في
+            عملية 4391/mdk/22 الثلاثاء ٢٠٢٢ / ١١ /</p>
+    </div>
+    <div class="closingCont">
+        <h3>وتقبلوا فائق الاحترا م</h3>
+    </div>
+    <div class="stampCont">
+        <div class="legalizations">
+            <img src="img/001__2_-removebg-preview.png" style="width: 510px;" alt="">
+            <img src="img/photo_2022-10-27_01-50-10-removebg-preview.png" style="width: 410px;" alt="">
+        </div>
+    </div>
+</div> -->

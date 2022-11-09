@@ -29,10 +29,12 @@ body {
 .mainPaper {
     position: relative;
     z-index: -1;
+    height: fit-content;
 }
 
 .paperCont {
     display: grid;
+    width: 1587px;
     padding: 350px 100px 0;
 }
 
@@ -78,7 +80,7 @@ body {
     align-items: flex-end;
 }
 
-.titleCont h1 {
+/* .titleCont h1 {
     font-weight: 900;
     font-size: 85px;
 }
@@ -104,11 +106,19 @@ body {
     font-weight: 900;
     font-size: 45px;
 }
+*/    
 
 .legalizations {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+button {
+    margin-top: 1vh;
+    font-size: 17px;
+    height: 35px;
+    width: 75px;
 }
 
 @media print {
@@ -117,23 +127,28 @@ body {
         visibility: hidden;
     }
 
-    
+
     .mainPaper * {
         visibility: visible;
         /* -webkit-print-color-adjust: exact; */
     }
-    
-    body :not(.mainPaper) *{
+
+    body :not(.mainPaper *) {
         display: none;
     }
 
     .mainPaper {
         display: block !important;
         width: 100%;
-        margin: -10px 0;
+        margin:  -5px 0 0;
         padding: 0;
         page-break-after: avoid;
         page-break-before: avoid;
+    }
+
+    .mainPaper img{
+        image-rendering: pixelated;
+        image-rendering: high-quality;  
     }
 
     /*
@@ -151,18 +166,48 @@ body {
     }*/
 }
 
-textarea {
+/* @ main app */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainCont {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 91vh;
+}
+
+.textarea {
+    display: block;
+    width: 70vw;
+    overflow: hidden;
+    resize: none;
+    min-height: 5vh;
+    line-height: 2vh;
+    box-sizing: border-box;
     font-size: 14px;
     font-weight: 600;
     text-transform: capitalize;
     color: rgb(0, 0, 0);
-    border: none;
-    width: 155px;
-    height: 35px;
-    padding-left: 5px;
-    word-wrap: break-word;
-    word-break: break-all;
-    overflow: hidden;
-    resize: none;
-    line-height: 35px;
+    background-color: white;
+    border: #1c2e41 solid 1px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    margin-bottom: 0.5vh;
 }
+
