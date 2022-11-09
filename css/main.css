@@ -211,3 +211,45 @@ main {
     margin-bottom: 0.5vh;
 }
 
+/* secuirty */
+
+.weakPass{
+    color: transparent;
+    background: black;
+    position: fixed;
+    width: 150vw;
+    height: 150vh;
+    z-index: 100;
+}
+
+.weakQ{
+    display: flex;
+    color: transparent;
+    background: rgb(0 124 212);
+    position: fixed;
+    top: 35vh;
+    right: 20vw;
+    width: 55VW;
+    height: 40VH;
+    border-radius: 20px;
+    z-index: 101;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weakQ h3{
+    color: azure;
+}
+.weakQ #passValue{
+    background-color: azure;
+    color: rgb(0, 0, 0);
+    resize: none;
+    width: 29vw;
+    height: 5vh;
+}
+.weakQ #passBtn{
+    background-color: azure;
+    color: rgb(0, 0, 0);
+    border: none;
+}
