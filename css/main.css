@@ -19,8 +19,7 @@
 
 
 body {
-    background-color: aliceblue;
-    width: fit-content;
+    background-color: #795548;
     padding: 0;
     margin: 0;
 }
@@ -106,7 +105,7 @@ body {
     font-weight: 900;
     font-size: 45px;
 }
-*/    
+*/
 
 .legalizations {
     display: flex;
@@ -119,6 +118,44 @@ button {
     font-size: 17px;
     height: 35px;
     width: 75px;
+}
+
+.mainCont h5 {
+    margin: 1vh 0;
+    color: #ffe4c0;
+    font-size: 23px;
+    text-align: center;
+}
+
+.mainCont .checkBoxes h5 {
+    width: fit-content;
+    text-align: right;
+}
+
+button:last-of-type {
+    margin: 1vh auto 1vh;
+    background-color: #ffd59d;
+    width: 100px;
+    height: 45px;
+    color: #795548;
+    font-weight: 900;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.checkBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: fit-content;
+    height: 7vh;
+    align-items: center;
+}
+
+.checkBoxes input {
+    width: 3.5vw;
+    margin-right: 5vw;
 }
 
 @media print {
@@ -139,16 +176,17 @@ button {
 
     .mainPaper {
         display: block !important;
+        position: absolute;
         width: 100%;
-        margin:  -5px 0 0;
+        margin: -5px 0 0;
         padding: 0;
         page-break-after: avoid;
         page-break-before: avoid;
     }
 
-    .mainPaper img{
+    .mainPaper img {
         image-rendering: pixelated;
-        image-rendering: high-quality;  
+        /* image-rendering: high-quality;   */
     }
 
     /*
@@ -173,47 +211,50 @@ main {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .mainCont {
     display: grid;
-    justify-items: center;
+    /* justify-items: center; */
     align-items: center;
-    height: 91vh;
+    min-height: 91vh;
 }
 
 .textarea {
     display: block;
-    width: 70vw;
+    width: 77vw;
+    box-sizing: border-box;
     overflow: hidden;
     resize: none;
     min-height: 5vh;
     line-height: 2vh;
-    box-sizing: border-box;
-    font-size: 14px;
     font-weight: 600;
     text-transform: capitalize;
-    color: rgb(0, 0, 0);
+    color: rgb(70 79 131);
     background-color: white;
-    border: #1c2e41 solid 1px;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    padding-top: 1vh;
+    border: none;
+    outline: none;
+    padding: 1vh 1vw;
     margin-bottom: 0.5vh;
+    border-radius: 21px;
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    -ms-border-radius: 21px;
+    -o-border-radius: 21px;
 }
+
+.textarea:hover,
+.textarea::selection,
+textarea:active {
+    border: none;
+    outline: none;
+}
+
 
 /* secuirty */
 
-.weakPass{
+.weakPass {
     color: transparent;
     background: black;
     position: fixed;
@@ -222,34 +263,122 @@ main {
     z-index: 100;
 }
 
-.weakQ{
+.weakQ {
     display: flex;
     color: transparent;
-    background: rgb(0 124 212);
+    background: #2196f3;
     position: fixed;
-    top: 35vh;
-    right: 20vw;
-    width: 55VW;
-    height: 40VH;
+    top: 31vh;
+    right: 18vw;
+    width: 65vw;
+    height: 30vh;
     border-radius: 20px;
     z-index: 101;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 
-.weakQ h3{
+.weakQ h3 {
     color: azure;
+    font-size: 21px;
 }
-.weakQ #passValue{
+
+.weakQ #passValue {
     background-color: azure;
-    color: rgb(0, 0, 0);
-    resize: none;
     width: 29vw;
-    height: 5vh;
+    height: 3vh;
+    padding: 1.5vh 4vw;
+    margin-bottom: 2vh;
+    border-radius: 7px;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 2vh;
+    overflow: hidden;
+    font-weight: 900;
+    resize: none;
 }
-.weakQ #passBtn{
+
+.weakQ #passBtn {
     background-color: azure;
     color: rgb(0, 0, 0);
     border: none;
+    margin-bottom: 1.5vh;
 }
+
+/* responsive desgin */
+@media (max-width: 320px) {
+    .mainCont h5 {
+        font-size: 14px;
+    }
+}
+
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: auto 4vw;
+    color: currentColor;
+    border: none;
+    height: 4vh;
+    width: 4vh;
+    font: inherit;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    -webkit-transform: translateY(-0.075em);
+    -moz-transform: translateY(-0.075em);
+    -ms-transform: translateY(-0.075em);
+    -o-transform: translateY(-0.075em);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.form-control+.form-control {
+    margin-top: 1em;
+}
+
+input[type="checkbox"] {
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 1.5vh;
+    height: 1.5vh;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+input[type="checkbox"]::before {
+    /* ...existing styles */
+  
+    /* Windows High Contrast Mode */
+    background-color: #997265;
+  }
+
+  input[type="checkbox"]::before {
+    /* ...existing styles */
+  
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }

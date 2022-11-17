@@ -29,7 +29,7 @@ function typeData() {
     // retrive values
     let titleValue = titleCont.textContent
     let sendtoValue = sendtoCont.textContent
-    let messValue = messCont.textContent
+    let messValue = messCont.innerText
     let greetValue = greetC.checked
     let closingValue = closingC.checked
     let stampValue = stampC.checked
@@ -38,7 +38,7 @@ function typeData() {
     // use the values
     titleFv.textContent = titleValue
     sendtoFv.textContent = sendtoValue
-    messFv.textContent = messValue
+    messFv.innerText = messValue
     greetValue ? greetFv.style.display = "block" : greetFv.style.display = "none"
     closingValue ? closingFv.style.display = "block" : closingFv.style.display = "none"
     stampValue ? stampFv.src = "img/001__2_-removebg-preview.png" : stampFv.src = ""
@@ -53,6 +53,7 @@ printbtn.addEventListener("click", function () {
     }
 });
 
+
 passBtn.addEventListener("click", function () {
     if (passValue.value === "Amola") {
         weakPass.style.display = "none"
@@ -60,8 +61,6 @@ passBtn.addEventListener("click", function () {
         admin = true
     }
 });
-
-
 
 
 

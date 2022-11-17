@@ -7,17 +7,18 @@
     <META HTTP-EQUIV="Content-language" CONTENT="ar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="css/main.css">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
     <title>Alhana</title>
 </head>
 
 <body>
     <div class="weakPass" id="weakPass">.</div>
-    <div class="weakQ">
+    <div class="weakQ"> 
         <h3>كلمة السر</h3>
-        <textarea  id="passValue" maxlength="5"></textarea>
+        <textarea id="passValue" maxlength="5"></textarea>
         <button id="passBtn">دخول</button>
     </div>
     <main>
@@ -28,19 +29,29 @@
             <h5>مرسل الي</h5>
             <!-- ? auto resize alt input -->
             <span class="textarea" role="textbox" id="sendToCont" contenteditable></span>
-            <h5>التحية</h5>
-            <input type="checkbox" id="greetC" value="True" checked>
+            <div class="checkBoxes">
+                <h5>التحية</h5>
+                <input type="checkbox" id="greetC" value="True" checked>
+            </div>
             <h5>المضمون</h5>
             <!-- ? auto resize alt input -->
-            <span class="textarea" role="textbox" id="messCont" contenteditable></span>
-            <h5>الخاتمة</h5>
-            <input type="checkbox" id="closingC" value="True" checked>
-            <h5>الختم</h5>
-            <input type="checkbox" id="stampC" value="True">
-            <h5>امضاء احمد</h5>
-            <input type="checkbox" id="ahmC" value="True">
-            <h5>امضاء صاحبة الشركة</h5>
-            <input type="checkbox" id="amlC" value="True">
+            <span class="textarea" role="textbox" id="messCont"contenteditable></span>
+            <div class="checkBoxes">
+                <h5>الخاتمة</h5>
+                <input type="checkbox" id="closingC" value="True" checked>
+            </div>
+            <div class="checkBoxes">
+                <h5>الختم</h5>
+                <input type="checkbox" id="stampC" value="True">
+            </div>
+            <div class="checkBoxes">
+                <h5>امضاء احمد</h5>
+                <input type="checkbox" id="ahmC" value="True">
+            </div>
+            <div class="checkBoxes">
+                <h5>امضاء صاحبة الشركة</h5>
+                <input type="checkbox" id="amlC" value="True">
+            </div>
             <button id="generate">انشاء</button>
         </div>
     </main>
@@ -66,18 +77,23 @@
                                 word-break: break-all;"></h2>
                 </div>
                 <div class="greetCont">
-                    <h3 class="greetContf" style="text-align: center; font-weight: 900; font-size: 45px; font-family: 'Tajawal', sans-serif;">تحية طيبة وبعد</h3>
+                    <h3 class="greetContf"
+                        style="text-align: center; font-weight: 900; font-size: 45px; font-family: 'Tajawal', sans-serif;">
+                        تحية طيبة وبعد</h3>
                 </div>
                 <div class="messCont">
-                    <p  class="messContf" style="font-weight: 500;
+                    <pre class="messContf" style="font-weight: 500;
                                             font-size: 39px;
                                             text-align: right;
                                             font-family: 'Tajawal', sans-serif;
                                             word-wrap: break-word;
-                                            word-break: break-all;"></p>
+                                            word-break: break-all;
+                                            white-space: pre-wrap;"></pre>
                 </div>
                 <div class="closingCont">
-                    <h3 style=" text-align: left; font-weight: 900; font-size: 43px; font-family: 'Tajawal', sans-serif;">وتقبلوا فائق الاحترام</h3>
+                    <h3
+                        style=" text-align: left; font-weight: 900; font-size: 43px; font-family: 'Tajawal', sans-serif;">
+                        وتقبلوا فائق الاحترام</h3>
                 </div>
                 <div class="stampCont">
                     <div class="legalizations">
