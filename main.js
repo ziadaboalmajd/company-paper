@@ -27,8 +27,8 @@ let admin = false
 
 function typeData() {
     // retrive values
-    let titleValue = titleCont.textContent
-    let sendtoValue = sendtoCont.textContent
+    let titleValue = titleCont.innerText
+    let sendtoValue = sendtoCont.innerText
     let messValue = messCont.innerText
     let greetValue = greetC.checked
     let closingValue = closingC.checked
@@ -39,8 +39,13 @@ function typeData() {
     titleFv.textContent = titleValue
     sendtoFv.textContent = sendtoValue
     messFv.innerText = messValue
-    greetValue ? greetFv.style.display = "block" : greetFv.style.display = "none"
-    closingValue ? closingFv.style.display = "block" : closingFv.style.display = "none"
+    // text visableity
+    titleValue == "" ? titleFv.style.display = "none" : greetFv.style.display = "flex"
+    sendtoValue == "" ? sendtoFv.style.display = "none" : greetFv.style.display = "flex"
+    messValue == "" ? messFv.style.display = "none" : greetFv.style.display = "flex"
+    // chechbox visableity
+    greetValue ? greetFv.style.display = "flex" : greetFv.style.display = "none"
+    closingValue ? closingFv.style.display = "flex" : closingFv.style.display = "none"
     stampValue ? stampFv.src = "img/001__2_-removebg-preview.png" : stampFv.src = ""
     amlCValue ? amlFv.src = "img/امضاء__2_-removebg-preview.png" : amlFv.src = ""
     ahmCValue ? ahmFv.src = "img/photo_2022-10-27_01-50-10-removebg-preview.png" : ahmFv.src = ""

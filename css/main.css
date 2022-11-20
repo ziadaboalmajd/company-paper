@@ -158,40 +158,10 @@ button:last-of-type {
     margin-right: 5vw;
 }
 
-@media print {
 
-    body * {
-        visibility: hidden;
-    }
-
-
-    .mainPaper * {
-        visibility: visible;
-        /* -webkit-print-color-adjust: exact; */
-    }
-
-    body :not(.mainPaper *) {
-        display: none;
-    }
-
-    .mainPaper {
-        display: block !important;
-        position: absolute;
-        width: 100%;
-        margin: -5px 0 0;
-        padding: 0;
-        page-break-after: avoid;
-        page-break-before: avoid;
-    }
-
-    .mainPaper img {
-        image-rendering: pixelated;
-        /* image-rendering: high-quality;   */
-    }
-
-    /*
-    body *{
-        display: none;
+/*
+body *{
+    display: none;
         width: 21cm;
         height: 29.7cm;
         margin: 0;
@@ -202,26 +172,25 @@ button:last-of-type {
         height: 297mm;
         -webkit-print-color-adjust: exact;
     }*/
-}
-
-/* @ main app */
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    min-height: 100vh;
-}
-
-.mainCont {
-    display: grid;
-    /* justify-items: center; */
-    align-items: center;
-    min-height: 91vh;
-}
-
-.textarea {
+    
+    /* @ main app */
+    
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        min-height: 100vh;
+    }
+    
+    .mainCont {
+        display: grid;
+        /* justify-items: center; */
+        align-items: center;
+        min-height: 91vh;
+    }
+    
+    .textarea {
     display: block;
     width: 77vw;
     box-sizing: border-box;
@@ -371,14 +340,45 @@ input[type="checkbox"]:checked::before {
 }
 input[type="checkbox"]::before {
     /* ...existing styles */
-  
+    
     /* Windows High Contrast Mode */
     background-color: #997265;
-  }
+}
 
-  input[type="checkbox"]::before {
+input[type="checkbox"]::before {
     /* ...existing styles */
-  
+    
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-  }
+}
+
+@media print {
+    
+    body * {
+        visibility: hidden;
+    }
+    
+    
+    .mainPaper * {
+        visibility: visible;
+        /* -webkit-print-color-adjust: exact; */
+    }
+    
+    body :not(.mainPaper *) {
+        display: none;
+    }
+    
+    .mainPaper {
+        display: block !important;
+        width: 100%;
+        margin: -5px 0 0;
+        padding: 0;
+        page-break-after: avoid;
+        page-break-before: avoid;
+    }
+    
+    .mainPaper img {
+        image-rendering: pixelated;
+        /* image-rendering: high-quality;   */
+    }
+}
