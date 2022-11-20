@@ -71,7 +71,7 @@ passBtn.addEventListener("click", function () {
 
 
 
-
+// alt print
 // function PrintElem(elem)
 // {
 //     var mywindow = window.open('', 'PRINT', 'height=400,width=600');
