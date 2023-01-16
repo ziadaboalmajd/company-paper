@@ -41,8 +41,8 @@ function typeData() {
     messFv.innerText = messValue
     // text visableity
     titleValue == "" ? titleFv.style.display = "none" : greetFv.style.display = "flex"
-    sendtoValue == "" ? sendtoFv.style.display = "none" : greetFv.style.display = "flex"
-    messValue == "" ? messFv.style.display = "none" : greetFv.style.display = "flex"
+    sendtoValue == "" ? sendtoFv.style.display = "none" : sendtoFv.style.display = "flex"
+    messValue == "" ? messFv.style.display = "none" : messFv.style.display = "flex"
     // chechbox visableity
     greetValue ? greetFv.style.display = "flex" : greetFv.style.display = "none"
     closingValue ? closingFv.style.display = "flex" : closingFv.style.display = "none"
