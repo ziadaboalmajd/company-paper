@@ -26,20 +26,23 @@ body {
 
 /* ? display of content */
 .mainPaper {
-    position: relative;
-    z-index: -1;
-    height: fit-content;
+    /* display: none; */
+    size: A4;
+    margin: 0;
+    width: 210mm;
+    height: 297mm;
+    max-height: 297mm;
+    background-image: url("../img/new\ company\ paper\ diffWm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-print-color-adjust: exact;
+    /* img/new company paper diffWm.jpg */
 }
 
 .paperCont {
     display: grid;
-    width: 1587px;
-    padding: 350px 100px 0;
-}
-
-.theContent {
-    position: absolute;
-    top: 0;
+    padding: 3.5cm 5mm;
 }
 
 .titleCont,
@@ -172,25 +175,25 @@ body *{
         height: 297mm;
         -webkit-print-color-adjust: exact;
     }*/
-    
-    /* @ main app */
-    
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        min-height: 100vh;
-    }
-    
-    .mainCont {
-        display: grid;
-        /* justify-items: center; */
-        align-items: center;
-        min-height: 91vh;
-    }
-    
-    .textarea {
+
+/* @ main app */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.mainCont {
+    display: grid;
+    /* justify-items: center; */
+    align-items: center;
+    min-height: 91vh;
+}
+
+.textarea {
     display: block;
     width: 77vw;
     box-sizing: border-box;
@@ -338,45 +341,42 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
+
 input[type="checkbox"]::before {
     /* ...existing styles */
-    
+
     /* Windows High Contrast Mode */
     background-color: #997265;
 }
 
 input[type="checkbox"]::before {
     /* ...existing styles */
-    
+
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
 @media print {
-    
     body * {
         visibility: hidden;
     }
-    
-    
+
+
     .mainPaper * {
         visibility: visible;
-        /* -webkit-print-color-adjust: exact; */
+        print-color-adjust: exact;
     }
-    
+
     body :not(.mainPaper *) {
         display: none;
     }
-    
+
     .mainPaper {
         display: block !important;
-        width: 100%;
-        margin: -5px 0 0;
-        padding: 0;
         page-break-after: avoid;
         page-break-before: avoid;
     }
-    
+
     .mainPaper img {
         image-rendering: pixelated;
         /* image-rendering: high-quality;   */

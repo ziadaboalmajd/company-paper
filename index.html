@@ -1,121 +1,194 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <META HTTP-EQUIV="Content-language" CONTENT="ar">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-        rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="Content-language" content="ar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Ubuntu:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <title>Alhana</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="weakPass" id="weakPass">.</div>
-    <div class="weakQ"> 
-        <h3>كلمة السر</h3>
-        <textarea id="passValue" maxlength="5"></textarea>
-        <button id="passBtn">دخول</button>
+    <div class="weakQ">
+      <h3>كلمة السر</h3>
+      <textarea id="passValue" maxlength="5"></textarea>
+      <button id="passBtn">دخول</button>
     </div>
     <main>
-        <div class="mainCont">
-            <h5>عنوان</h5>
-            <!-- ? auto resize alt input -->
-            <span class="textarea" role="textbox" id="titleCont" contenteditable></span>
-            <h5>مرسل الي</h5>
-            <!-- ? auto resize alt input -->
-            <span class="textarea" role="textbox" id="sendToCont" contenteditable></span>
-            <div class="checkBoxes">
-                <h5>التحية</h5>
-                <input type="checkbox" id="greetC" value="True" checked>
-            </div>
-            <h5>المضمون</h5>
-            <!-- ? auto resize alt input -->
-            <span class="textarea" role="textbox" id="messCont"contenteditable></span>
-            <div class="checkBoxes">
-                <h5>الخاتمة</h5>
-                <input type="checkbox" id="closingC" value="True" checked>
-            </div>
-            <div class="checkBoxes">
-                <h5>الختم</h5>
-                <input type="checkbox" id="stampC" value="True">
-            </div>
-            <div class="checkBoxes">
-                <h5>امضاء احمد</h5>
-                <input type="checkbox" id="ahmC" value="True">
-            </div>
-            <div class="checkBoxes">
-                <h5>امضاء صاحبة الشركة</h5>
-                <input type="checkbox" id="amlC" value="True">
-            </div>
-            <button id="generate">انشاء</button>
+      <div class="mainCont">
+        <h5>عنوان</h5>
+        <!-- ? auto resize alt input -->
+        <span
+          class="textarea"
+          role="textbox"
+          id="titleCont"
+          contenteditable
+        ></span>
+        <h5>مرسل الي</h5>
+        <!-- ? auto resize alt input -->
+        <span
+          class="textarea"
+          role="textbox"
+          id="sendToCont"
+          contenteditable
+        ></span>
+        <div class="checkBoxes">
+          <h5>التحية</h5>
+          <input type="checkbox" id="greetC" value="True" checked />
         </div>
+        <h5>المضمون</h5>
+        <!-- ? auto resize alt input -->
+        <span
+          class="textarea"
+          role="textbox"
+          id="messCont"
+          contenteditable
+        ></span>
+        <div class="checkBoxes">
+          <h5>الخاتمة</h5>
+          <input type="checkbox" id="closingC" value="True" checked />
+        </div>
+        <div class="checkBoxes">
+          <h5>الختم</h5>
+          <input type="checkbox" id="stampC" value="True" />
+        </div>
+        <div class="checkBoxes">
+          <h5>امضاء احمد</h5>
+          <input type="checkbox" id="ahmC" value="True" />
+        </div>
+        <div class="checkBoxes">
+          <h5>امضاء صاحبة الشركة</h5>
+          <input type="checkbox" id="amlC" value="True" />
+        </div>
+        <button id="generate">انشاء</button>
+      </div>
     </main>
-    <div class="mainPaper" style="display: none;">
-        <img src="./img/new company paper diffWm.jpg" style="width:1790px; image-rendering: high-quality;" alt="">
-        <div class="theContent">
-            <div class="paperCont">
-                <div class="titleCont">
-                    <h1 class="titleContf" style="text-decoration: underline;
-                                text-align: center;
-                                font-weight: 900;
-                                font-size: 85px;
-                                font-family: 'Tajawal', sans-serif;
-                                word-wrap: break-word;
-                                word-break: break-all;"></h1>
-                </div>
-                <div class="sendToCont">
-                    <h2 class="sendToContf" style=" font-weight: 900;
-                                font-size: 47px;
-                                text-align: right;
-                                font-family: 'Tajawal', sans-serif;
-                                word-wrap: break-word;
-                                word-break: break-all;"></h2>
-                </div>
-                <div class="greetCont">
-                    <h3 class="greetContf"
-                        style="text-align: center; font-weight: 900; font-size: 45px; font-family: 'Tajawal', sans-serif;">
-                        تحية طيبة وبعد</h3>
-                </div>
-                <div class="messCont">
-                    <pre class="messContf" style="font-weight: 500;
-                                            font-size: 39px;
-                                            text-align: right;
-                                            font-family: 'Tajawal', sans-serif;
-                                            word-wrap: break-word;
-                                            word-break: break-all;
-                                            white-space: pre-wrap;"></pre>
-                </div>
-                <div class="closingCont">
-                    <h3
-                        style=" text-align: left; font-weight: 900; font-size: 43px; font-family: 'Tajawal', sans-serif;">
-                        وتقبلوا فائق الاحترام</h3>
-                </div>
-                <div class="stampCont">
-                    <div class="legalizations">
-                        <img class="stampC" src="img/001__2_-removebg-preview.png" style="width: 510px;" alt="">
-                        <img class="amlC" src="img/امضاء__2_-removebg-preview.png" style="width: 510px;" alt="">
-                        <img class="ahmC" src="img/photo_2022-10-27_01-50-10-removebg-preview.png" style="width: 410px;"
-                            alt="">
-                    </div>
-                </div>
+    <div class="mainPaper" style="display: none">
+      <img
+        src="./img/new company paper diffWm.jpg"
+        alt="paper"
+        style="width: 21cm; display: inline; position: absolute; z-index: -1"
+      />
+      <div class="theContent">
+        <div class="paperCont">
+          <div class="titleCont">
+            <h1
+              class="titleContf"
+              style="
+                text-decoration: underline;
+                text-align: center;
+                font-weight: 900;
+                font-size: 7mm;
+                font-family: 'Tajawal', sans-serif;
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
+                max-height: 11mm;
+                overflow: hidden;
+                margin: 2m 0;
+              "
+            ></h1>
+            <!-- /* word-wrap: break-word;
+                    word-break: break-all; */ -->
+          </div>
+          <div class="sendToCont">
+            <h2
+              class="sendToContf"
+              style="
+                font-weight: 900;
+                font-size: 6mm;
+                text-align: right;
+                font-family: 'Tajawal', sans-serif;
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
+                max-height: 9mm;
+                overflow: hidden;
+                margin: 2m 0;
+              "
+            ></h2>
+          </div>
+          <div class="greetCont">
+            <h3
+              class="greetContf"
+              style="
+                text-align: center;
+                font-weight: 900;
+                font-size: 5mm;
+                font-family: 'Tajawal', sans-serif;
+              "
+            >
+              تحية طيبة وبعد
+            </h3>
+          </div>
+          <div class="messCont">
+            <pre
+              class="messContf"
+              style="
+                font-weight: 500;
+                font-size: 5mm;
+                text-align: right;
+                font-family: 'Tajawal', sans-serif;
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
+                max-height: 99mm;
+                overflow: hidden;
+                margin: 2m 0;
+              "
+            ></pre>
+          </div>
+          <div class="closingCont">
+            <h3
+              style="
+                text-align: left;
+                font-weight: 900;
+                font-size: 4mm;
+                font-family: 'Tajawal', sans-serif;
+              "
+            >
+              وتقبلوا فائق الاحترام
+            </h3>
+          </div>
+          <div class="stampCont">
+            <div class="legalizations">
+              <img
+                class="stampC"
+                src="img/001__2_-removebg-preview.png"
+                style="width: 59mm"
+                alt=""
+              />
+              <img
+                class="amlC"
+                src="img/امضاء__2_-removebg-preview.png"
+                style="width: 47mm"
+                alt=""
+              />
+              <img
+                class="ahmC"
+                src="img/photo_2022-10-27_01-50-10-removebg-preview.png"
+                style="width: 41mm"
+                alt=""
+              />
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="main.js"></script>
-</body>
-
+    <script src="main.js" charset="utf-8" type="text/javascript"></script>
+  </body>
 </html>
-
-
-
-
-
-
 
 <!-- <h5>عنوان</h5>
 <textarea type="text" id="jobinput"></textarea>
@@ -134,8 +207,6 @@
 <h5>امضاء صاحبة الشركة</h5>
 <input type="checkbox" id="closingC" value="True">
 <button id="generate">انشاء</button> -->
-
-
 
 <!-- <div class="paperCont">
     <div class="titleCont">

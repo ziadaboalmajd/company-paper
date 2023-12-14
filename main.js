@@ -23,53 +23,74 @@ const passBtn = document.getElementById("passBtn");
 const weakPass = document.getElementById("weakPass");
 const weakQ = document.querySelector(".weakQ");
 const passValue = document.getElementById("passValue");
-let admin = false
+let admin = false;
 
 function typeData() {
-    // retrive values
-    let titleValue = titleCont.innerText
-    let sendtoValue = sendtoCont.innerText
-    let messValue = messCont.innerText
-    let greetValue = greetC.checked
-    let closingValue = closingC.checked
-    let stampValue = stampC.checked
-    let amlCValue = amlC.checked
-    let ahmCValue = ahmC.checked
-    // use the values
-    titleFv.textContent = titleValue
-    sendtoFv.textContent = sendtoValue
-    messFv.innerText = messValue
-    // text visableity
-    titleValue == "" ? titleFv.style.display = "none" : greetFv.style.display = "flex"
-    sendtoValue == "" ? sendtoFv.style.display = "none" : sendtoFv.style.display = "flex"
-    messValue == "" ? messFv.style.display = "none" : messFv.style.display = "flex"
-    // chechbox visableity
-    greetValue ? greetFv.style.display = "flex" : greetFv.style.display = "none"
-    closingValue ? closingFv.style.display = "flex" : closingFv.style.display = "none"
-    stampValue ? stampFv.src = "img/001__2_-removebg-preview.png" : stampFv.src = ""
-    amlCValue ? amlFv.src = "img/امضاء__2_-removebg-preview.png" : amlFv.src = ""
-    ahmCValue ? ahmFv.src = "img/photo_2022-10-27_01-50-10-removebg-preview.png" : ahmFv.src = ""
+  // retrive values
+  let titleValue = titleCont.innerText;
+  let sendtoValue = sendtoCont.innerText;
+  let messValue = messCont.textContent;
+  let greetValue = greetC.checked;
+  let closingValue = closingC.checked;
+  let stampValue = stampC.checked;
+  let amlCValue = amlC.checked;
+  let ahmCValue = ahmC.checked;
+  // use the values
+  titleFv.textContent = titleValue;
+  sendtoFv.textContent = sendtoValue;
+  messFv.textContent = messValue;
+  // text visableity
+  if (titleValue.trim() !== "" && titleValue.replaceAll(/\s/g, "").length > 2) {
+    titleFv.style.display = "flex";
+  } else {
+    titleFv.style.display = "none";
+  }
+  if (
+    sendtoValue.trim() !== "" &&
+    sendtoValue.replaceAll(/\s/g, "").length > 2
+  ) {
+    sendtoFv.style.display = "flex";
+  } else {
+    sendtoFv.style.display = "none";
+  }
+  if (messValue.trim() !== "" && messValue.replaceAll(/\s/g, "").length > 2) {
+    messFv.style.display = "flex";
+  } else {
+    messFv.style.display = "none";
+  }
+
+  // chechbox visableity
+  greetValue
+    ? (greetFv.style.display = "flex")
+    : (greetFv.style.display = "none");
+  closingValue
+    ? (closingFv.style.display = "flex")
+    : (closingFv.style.display = "none");
+  stampValue
+    ? (stampFv.src = "img/001__2_-removebg-preview.png")
+    : (stampFv.src = "");
+  amlCValue
+    ? (amlFv.src = "img/امضاء__2_-removebg-preview.png")
+    : (amlFv.src = "");
+  ahmCValue
+    ? (ahmFv.src = "img/photo_2022-10-27_01-50-10-removebg-preview.png")
+    : (ahmFv.src = "");
 }
 
 printbtn.addEventListener("click", function () {
-    if (admin == true) {
-        typeData()
-        window.print();
-    }
+  if (admin == true) {
+    typeData();
+    window.print();
+  }
 });
-
 
 passBtn.addEventListener("click", function () {
-    if (passValue.value === "Amola") {
-        weakPass.style.display = "none"
-        weakQ.style.display = "none"
-        admin = true
-    }
+  if (passValue.value === "Amola") {
+    weakPass.style.display = "none";
+    weakQ.style.display = "none";
+    admin = true;
+  }
 });
-
-
-
-
 
 // alt print
 // function PrintElem(elem)
