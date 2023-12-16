@@ -29,7 +29,7 @@ function typeData() {
   // retrive values
   let titleValue = titleCont.innerText;
   let sendtoValue = sendtoCont.innerText;
-  let messValue = messCont.textContent;
+  let messValue = messCont.innerText;
   let greetValue = greetC.checked;
   let closingValue = closingC.checked;
   let stampValue = stampC.checked;
