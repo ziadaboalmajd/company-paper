@@ -19,7 +19,7 @@
 
 
 body {
-    background-color: #795548;
+    background-color: #EEF0F2;
     padding: 0;
     margin: 0;
 }
@@ -74,7 +74,7 @@ body {
 
 .closingCont {
     justify-content: left;
-    padding-left: 75px;
+    padding-left: 25px;
 }
 
 .stampCont {
@@ -123,11 +123,17 @@ button {
     width: 75px;
 }
 
-.mainCont h5 {
+.mainCont h4 {
     margin: 1vh 0;
-    color: #ffe4c0;
     font-size: 23px;
     text-align: center;
+    color: #353B3C;
+}
+
+.mainCont h5 {
+    margin: 1vh 0;
+    font-size: 19px;
+    color: #846A6A;
 }
 
 .mainCont .checkBoxes h5 {
@@ -136,13 +142,13 @@ button {
 }
 
 button:last-of-type {
-    margin: 1vh auto 1vh;
-    background-color: #ffd59d;
-    width: 100px;
-    height: 45px;
-    color: #795548;
+    height: auto;
+    margin: 1vh auto;
+    padding: 10px 5px;
+    background-color: #353B3C;
+    color: #EEF0F2;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 17px;
     border: none;
     border-radius: 20px;
 }
@@ -203,7 +209,7 @@ main {
     line-height: 2vh;
     font-weight: 600;
     text-transform: capitalize;
-    color: rgb(70 79 131);
+    color: #353B3C;
     background-color: white;
     border: none;
     outline: none;
@@ -214,6 +220,10 @@ main {
     -moz-border-radius: 21px;
     -ms-border-radius: 21px;
     -o-border-radius: 21px;
+}
+
+*::selection {
+    background-color: #353B3C;
 }
 
 .textarea:hover,
@@ -227,55 +237,58 @@ textarea:active {
 /* secuirty */
 
 .weakPass {
-    color: transparent;
-    background: black;
     position: fixed;
-    width: 150vw;
-    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #EEF0F2;
     z-index: 100;
 }
 
 .weakQ {
     display: flex;
-    color: transparent;
-    background: #2196f3;
-    position: fixed;
-    top: 31vh;
-    right: 18vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 65vw;
     height: 30vh;
-    border-radius: 20px;
+    max-width: 350px;
+    background: #353B3C;
     z-index: 101;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+    border-radius: 20px;
 }
 
 .weakQ h3 {
-    color: azure;
+    color: #EEF0F2;
     font-size: 21px;
 }
 
 .weakQ #passValue {
-    background-color: azure;
-    width: 29vw;
+    background: #EEF0F2;
+    width: 60%;
     height: 3vh;
     padding: 1.5vh 4vw;
     margin-bottom: 2vh;
-    border-radius: 7px;
     text-align: center;
-    border: none;
+    border: 2px solid #373A40;
     outline: none;
-    color: rgb(0, 0, 0);
+    color: #373A40;
     font-size: 2vh;
     overflow: hidden;
     font-weight: 900;
     resize: none;
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
 }
 
 .weakQ #passBtn {
-    background-color: azure;
-    color: rgb(0, 0, 0);
+    background: #EEF0F2;
+    color: #353B3C;
     border: none;
     margin-bottom: 1.5vh;
 }
@@ -346,7 +359,7 @@ input[type="checkbox"]::before {
     /* ...existing styles */
 
     /* Windows High Contrast Mode */
-    background-color: #997265;
+    background-color: #846A6A;
 }
 
 input[type="checkbox"]::before {
@@ -361,24 +374,46 @@ input[type="checkbox"]::before {
         visibility: hidden;
     }
 
+    .mainPaper {
+        visibility: visible;
+        print-color-adjust: exact;
+        display: flex !important;
+        justify-content: center;
+        align-items: start;
+        page-break-after: avoid;
+        page-break-before: avoid;
+        width: 21cm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 
     .mainPaper * {
         visibility: visible;
-        print-color-adjust: exact;
     }
 
     body :not(.mainPaper *) {
         display: none;
     }
 
-    .mainPaper {
-        display: block !important;
-        page-break-after: avoid;
-        page-break-before: avoid;
-    }
-
     .mainPaper img {
         image-rendering: pixelated;
-        /* image-rendering: high-quality;   */
+    }
+
+    .theContent {
+        flex: 1;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    .mainPaper {
+        padding: 10mm 5mm 5mm;
     }
 }

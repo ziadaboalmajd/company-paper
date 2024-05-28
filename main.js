@@ -85,7 +85,7 @@ printbtn.addEventListener("click", function () {
 });
 
 passBtn.addEventListener("click", function () {
-  if (passValue.value === "Amola") {
+  if (passValue.value === "amola") {
     weakPass.style.display = "none";
     weakQ.style.display = "none";
     admin = true;
